@@ -1,3 +1,6 @@
+// CircularList baseded on Array will be more efficient as a queue than CircularList based on LinkedList.
+
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
