@@ -1,0 +1,19 @@
+public class exampleOfLHM {
+    public static void main(String[] args) {
+        LinkedHashMap<Integer, Integer> lk = new LinkedHashMap<>(2, 0.75F, true);
+        lk.put(1, 1);
+        lk.put(2, 2);
+        lk.put(3, 3);
+        
+        for(var key : lk.keySet()){
+            lk.get(key);
+        }
+         
+
+
+    }
+}
+The program above would throm exception.
+Because get function is a structural modification for LinkedHashMap, and the enhanced for loop would use iterator to call get function. 
+And iterator would report any modification expect the modification casued by iterator's remove function. Thus the modification invoked by 
+get function would be reported by iterator. 
