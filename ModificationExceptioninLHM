@@ -17,3 +17,5 @@ The program above would throm exception.
 Because get function is a structural modification for LinkedHashMap, and the enhanced for loop would use iterator to call get function. 
 And iterator would report any modification expect the modification casued by iterator's remove function. Thus the modification invoked by 
 get function would be reported by iterator. 
+
+To get all values from a LHM, we can use values() function.
