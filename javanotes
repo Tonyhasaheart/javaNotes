@@ -1,0 +1,2 @@
+1. time complexity for HashMap.get,put,containsKey is all O(1) if the hashcode works perfectly.
+2. Iteration time complextiy of HashMap is proportional to capicity rather than size.
