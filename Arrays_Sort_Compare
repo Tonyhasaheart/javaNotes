@@ -1,0 +1,31 @@
+//The is a typical compare and sort problem
+//LeetCode 937
+class Solution {
+    public String[] reorderLogFiles(String[] logs) {
+        Arrays.sort(logs,(String log1,String log2)->{
+            String[] split1 = log1.split(" ",2);
+            String[] split2 = log2.split(" ",2);
+            //to make a judgement about digit, use this function: Character.isDigit
+            boolean digit1 = Character.isDigit(split1[1].charAt(0));
+            boolean digit2 = Character.isDigit(split2[1].charAt(0));
+            
+            if(!digit1 && !digit2){
+                int compare = split1[1].compareTo(split2[1]);
+                return (compare == 0 ? split1[0].compareTo(split2[0]): compare );   
+            }else if(digit1 && !digit2){
+                return 1;
+            }else if(!digit1 && digit2){
+                return -1;
+            }else{
+                return 0;
+            }
+            
+                
+            
+        });
+        return logs;
+        
+    }
+
+
+}
