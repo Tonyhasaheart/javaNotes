@@ -1,0 +1,8 @@
+https://leetcode.com/problems/happy-number/solution/
+Using Floyd's circle algorithm can help us find a circle in a LinkedList. The time complexity is propotional to the nums in that cycle.
+
+core codes:
+slowerRunner = sr.next();
+fastRunner = fr.next.next();
+
+If they meet with each other in the linkedlist then there is a cycle. Otherwise, there isn't a cycle.
